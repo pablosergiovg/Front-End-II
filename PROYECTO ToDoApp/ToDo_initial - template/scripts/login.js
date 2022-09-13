@@ -53,7 +53,7 @@ window.addEventListener('load', function () {
         .then(res => res.json())
         .then(data => {
 
-            localStorage.setItem('jwt', JSON.stringify(data.jwt));
+            localStorage.setItem('jwt', data.jwt);
 
             location.replace('/mis-tareas.html');
             

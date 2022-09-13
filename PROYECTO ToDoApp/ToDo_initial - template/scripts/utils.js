@@ -24,4 +24,3 @@ function validarContrasenia(contrasenia) {
 function compararContrasenias(contrasenia_1, contrasenia_2) {
     
 }
-
