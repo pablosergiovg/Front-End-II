@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+body {
+  background-color: rgb(219, 219, 219);
+}
+
+body .h1-boton{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: .5em 1em;
+  background-color: white;
+  border-bottom: 1px solid lightgrey;
+}
+
+h1 {
+  color: grey;
+}
+
+.contenedor {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 80%;
+  margin: 2em 10%;
+}
+
+.item {
+  width: 30em;
+  background-color: white;
+  box-sizing: border-box;
+  padding: 1.5em;
+  margin-bottom: 1em;
+  border-radius: 5px;
+  border: 1px solid lightgray;
+}
+
+.item img {
+  width: 100%;
+}
+
+.item h2 {
+  font-size: 1rem;
+  margin-bottom: 0.2rem;
+}
+
+#cambiar-tema{
+  background-color: rgb(52, 52, 52);
+  color: white;
+  height: 3vh;
+  width: 13vh;
+  border-radius: 0.5em;
+  border: none;
+  margin: 1rem;
+}
+
+#cambiar-tema:hover {
+  background-color: aliceblue;
+  color: black;
+}
+
+
+
+/* estilos para tema oscuro ---------------------------------------------------------------------------------------------- */
+/* los suigientes estilos son los que usaremos para aplicar el modo oscuro, ustedes deberán modificar los selectores para
+poder resolver el ejercicio */
+
+
+.dark{
+  background-color: rgb(39, 39, 39);
+}
+ 
+
+.dark .h1-boton{
+  background-color: rgb(19, 19, 19);
+  border-color: black;
+}
+
+.dark .h1-boton h1{ 
+  color: rgb(170, 170, 170);
+}
+
+
+.dark .item{
+  background-color: rgb(19, 19, 19);
+  border-color: black;
+}
+
+.dark h2
+{
+  color: rgb(230, 230, 230);
+}
+
+.dark p
+{
+  color: rgb(230, 230, 230);
+}

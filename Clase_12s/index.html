@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+    <title>Document</title>
+</head>
+<body>
+    <form action="submit" class="formulario">
+        <h1>Crear cuenta</h1>
+
+        <div class="errores">
+            <ul>
+
+            </ul>
+        </div>
+
+        <input type="text" name="nombre" id="nombre" placeholder=" Nombre">
+        <input type="email" name="email" id="email" placeholder=" Email">
+        <input type="password" name="password" id="password" placeholder=" Contraseña">
+        <p><select name="genero" id="genero">
+            <option value="0">- seleccione su genero -</option>
+            <option value="1">femenino</option>
+            <option value="2">masculino</option>
+            <option value="3">otro</option>
+        </select></p>
+        <input type="date" name="fecha" id="fecha">
+        <div class="terminosCondiciones">  
+            <input type="checkbox" name="tyc" id="tyc">
+            <label for="tyc">Aceptar Terminos y Condicions</label>
+        </div>
+        <button type="submit">Registrarse</button>
+    </form>
+</body>
+</html>

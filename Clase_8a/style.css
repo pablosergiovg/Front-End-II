@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+}
+
+body{
+    height: 100vh;
+    background-color: slategray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+div{
+    background-color: aliceblue;
+    width: 50vw;
+    height: 13vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+h1{
+    color: coral;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 0.5rem 0 0 0;
+}
+
+h1:hover{
+    color: black;
+}
+
+p{
+    text-align: justify;
+    padding: 1rem 2rem;
+    color: cadetblue;
+}
+
+.boton-alerta{
+    background-color: aliceblue;
+    color: coral;
+    border: none;
+    border-radius: 1rem;
+    padding: 0.5rem;
+    margin-top: 1rem;
+}
+
+.boton-alerta:hover{
+    background-color: coral;
+    color: aliceblue;
+}

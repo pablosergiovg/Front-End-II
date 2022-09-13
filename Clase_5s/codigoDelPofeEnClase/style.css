@@ -1,0 +1,48 @@
+.mi-body {
+  background-color: burlywood;
+}
+
+body.otra-clase {
+  background-color: aqua;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.contenedor {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.parrafo {
+  color: aqua;
+}
+
+#cambiar-tema {
+  font-size: 2em;
+  padding: 0.5em 0.7em;
+  border-radius: 50em;
+  border: none;
+  cursor: pointer;
+}
+
+#cambiar-tema:hover {
+  background-color: aliceblue;
+}
+
+/* ------------------------------- Clases DARK ------------------------------ */
+
+.dark {
+  background-color: #383838;
+  color: aliceblue;
+}
+
+.dark p {
+  color: aliceblue;
+}

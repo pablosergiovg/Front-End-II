@@ -1,0 +1,129 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+#encabezado {
+    height: 20vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid red;
+    background-color: aliceblue;
+}
+
+#encabezado div {
+    margin-left: 20px;
+    display: flex;
+    width: 30%;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 2rem;
+
+}
+
+#encabezado div img {
+    width: 100px;
+    height: 100px;
+}
+
+#encabezado nav {
+    width: 40%;
+}
+
+#encabezado nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+#encabezado nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.2rem;
+}
+
+#encabezado nav ul li button {
+    border: none;
+    background-color: aliceblue;
+    color: black;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+#principal {
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h2 {
+    margin-top: 15px;
+    text-decoration: underline;
+    background-color: beige;
+    width: 75vw;
+    padding-left: 2rem;
+}
+
+#internacionales {    
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    margin: 50px auto 100px;
+}
+
+#nacionales {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    margin: 50px auto 50px;
+}
+
+article {
+    width: 20%;
+    margin: 20px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+#nacionales article img {
+    width: 300px;
+}
+
+#internacionales article img {
+    width: 400px;
+}
+
+#pie {
+    background-color: cadetblue;
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.iconosFooter {
+    border: 0.1rem solid;
+    border-radius: 1rem;
+    padding: 0.5rem 2rem;
+}
+
+.iconosFooter:hover {
+    background-color: white;
+}
+
+.icono {
+    font-size: 1.5rem;
+}
+
+.oculto {
+    display: none;
+}

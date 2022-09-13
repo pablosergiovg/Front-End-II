@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+}
+
+.centrar{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    height: 20vh;
+    width: 70vw;
+    background-color: antiquewhite;
+    border-radius: 2rem;
+    border-style:solid;
+    padding: 1rem;
+}
+
+
+#boton{
+    border-radius: 2rem;
+    border-color: cadetblue;
+    background-color: rebeccapurple;
+    font-weight: bold;
+    color: white;
+    padding: 0.2rem 0.5rem;
+}

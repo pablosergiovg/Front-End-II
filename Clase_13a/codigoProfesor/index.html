@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="./app.js" defer></script>
+</head>
+
+<body>
+  <form>
+    <div class="container">
+      <h1>Registro</h1>
+      <p>Por favor rellenar los cambos para registrarse</p>
+      <hr>
+
+      <label for="email"><b>Email</b></label>
+      <input type="text" placeholder="Ingresá Email" name="email" id="email" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Ingresá Password" name="psw" id="password" required>
+
+      <select id="rol">
+        <option value selected hidden disabled>-- seleccionar -- </option>
+        <option value="frontend">Frontend</option>
+        <option value="backend">Backend</option>
+      </select>
+
+      <hr>
+      <div>
+        <input type="checkbox" id="legal">
+        <label for="legal">Acepto los términos y condiciones.</label>
+      </div>
+
+      <button type="submit" class="registerbtn">Registrarse 👌</button>
+      <div class="errores">
+
+      </div>
+    </div>
+  </form>
+</body>
+
+</html>
