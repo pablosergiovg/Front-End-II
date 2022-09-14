@@ -25,17 +25,18 @@ window.addEventListener('load', function () {
 
   /* ---------------- variables globales y llamado a funciones ---------------- */
   
-
+  
+  const ENDPOINTBASE = 'https://ctd-todo-api.herokuapp.com/v1';
+  const JWT = this.localStorage.getItem('jwt');
 
   const btnCerrarSesion = this.document.querySelector('#closeApp');
   const nombreUsuario = this.document.querySelector('.user-info p');
   const contenedorTareasPendientes = this.document.querySelector('.tareas-pendientes');
   const contenedorTareasTerminadas = this.document.querySelector('.tareas-terminadas');
   const formCrearTarea = this.document.querySelector('form.nueva-tarea');
-  const btnEnviar = this.document.querySelector('#btn-enviar');
+  //const btnEnviar = this.document.querySelector('#btn-enviar');
+  const inputNuevaTarea = this.document.querySelector('#nuevaTarea');
 
-  const ENDPOINTBASE = 'https://ctd-todo-api.herokuapp.com/v1';
-  const JWT = this.localStorage.getItem('jwt');
 
 
 
@@ -93,7 +94,6 @@ window.addEventListener('load', function () {
       })
 
 
-
   };
   obtenerNombreUsuario()
 
@@ -143,10 +143,26 @@ window.addEventListener('load', function () {
   formCrearTarea.addEventListener('submit', function (event) {
     event.preventDefault();
 
+    const url = `${ENDPOINTBASE}/tasks`;
+
+    const configuraciones = {
+      method: 'POST',
+      headers: {
+        'content-type':'application/json',
+        authorization : JWT
+      },
+      body: JSON.stringify({
+        description: inputNuevaTarea.value,
+        completed: false
+      })
+    }
     
-    
+    fetch(url, configuraciones)
+    .then(response => response.json())
+    .then(data => data)
 
 
+    consultarTareas();
 
 
   });
@@ -162,6 +178,9 @@ window.addEventListener('load', function () {
     // filtramos las terminadas
     const listadoTareasTerminadas = listado.filter( item => item.completed)
     const listadoTareasPendientes = listado.filter( item => !item.completed)
+
+    contenedorTareasPendientes.innerHTML = '';
+    contenedorTareasTerminadas.innerHTML = '';
 
     console.log("Pendientes");
     console.log(listadoTareasPendientes);
