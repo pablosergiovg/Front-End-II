@@ -19,14 +19,23 @@ window.addEventListener('load', function () {
       
         event.preventDefault();
 
-        const usuario = {
-            firstName: nombre.value,
-            lastName: apellido.value,
-            email: email.value,
-            password: contrasenia.value,
+        let usuario;
+
+        if(validarTexto(nombre) && validarTexto(apellido)
+        && validarEmail(email) && validarContrasenia(contrasenia)
+        && compararContrasenias(contrasenia, repetirContrasenia)
+        ){
+            usuario = {
+                firstName: normalizarTexto(nombre),
+                lastName: normalizarTexto(apellido),
+                email: normalizarEmail(email),
+                password: contrasenia.value,
+            };
+            realizarRegister(usuario);
         }
 
-        realizarRegister(usuario);
+        
+
 
     });
 

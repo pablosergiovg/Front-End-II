@@ -34,7 +34,6 @@ window.addEventListener('load', function () {
   const contenedorTareasPendientes = this.document.querySelector('.tareas-pendientes');
   const contenedorTareasTerminadas = this.document.querySelector('.tareas-terminadas');
   const formCrearTarea = this.document.querySelector('form.nueva-tarea');
-  //const btnEnviar = this.document.querySelector('#btn-enviar');
   const inputNuevaTarea = this.document.querySelector('#nuevaTarea');
 
 
