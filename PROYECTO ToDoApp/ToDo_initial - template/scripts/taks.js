@@ -125,6 +125,7 @@ window.addEventListener('load', function () {
         console.log(data)
         // llamo a la funcion que pinta las tareas en pantalla
         renderizarTareas(data);
+        botonBorrarTarea()
       })
 
 
@@ -216,7 +217,9 @@ window.addEventListener('load', function () {
       `
     })
 
+    botonesCambioEstado();
 
+    
 
 
   };
@@ -225,7 +228,35 @@ window.addEventListener('load', function () {
   /*                  FUNCIÓN 6 - Cambiar estado de tarea [PUT]                 */
   /* -------------------------------------------------------------------------- */
   function botonesCambioEstado() {
-    
+
+
+    const nodoBotonesCambioEstado = document.querySelectorAll('.change');
+
+    nodoBotonesCambioEstado.forEach(btn => {
+
+      btn.addEventListener('click', function(e){
+
+
+        const terminada = btn.classList.contains('incompleta')
+
+        const url = ENDPOINTBASE + `/tasks/${btn.id}`;
+
+        const config = {
+          method: 'PUT',
+          headers: {
+            'content-type': 'application/json',
+            authorization: JWT,
+          },
+          body: JSON.stringify({
+            completed: !terminada,
+          })
+        }
+
+        fetch(url, config)
+        .then(res => res.json())
+        .then(data => consultarTareas())
+      })
+    })
     
 
 
@@ -237,9 +268,29 @@ window.addEventListener('load', function () {
   /*                     FUNCIÓN 7 - Eliminar tarea [DELETE]                    */
   /* -------------------------------------------------------------------------- */
   function botonBorrarTarea() {
-   
     
+   
+    const nodoBotonesBorrar = document.querySelectorAll('.borrar');
 
+    nodoBotonesBorrar.forEach(btn => {
+
+      btn.addEventListener('click', function(e){
+
+        const url = ENDPOINTBASE + `/tasks/${btn.getAttribute('id')}`;
+
+        const config = {
+          method: 'DELETE',
+          headers: {
+            authorization: JWT,
+          },
+        }
+
+        fetch(url, config)
+        .then(res => res.json())
+        .then(data => consultarTareas())
+      })
+    })
+  
     
 
   };
